@@ -47,6 +47,9 @@ public class LokasiController {
                 .map(lokasiEntity -> {
                     // Memperbarui entitas dengan detail baru
                     lokasiEntity.setNamaLokasi(lokasiEntityDetails.getNamaLokasi());
+                    lokasiEntity.setNegara(lokasiEntityDetails.getNegara());
+                    lokasiEntity.setProvinsi(lokasiEntityDetails.getProvinsi());
+                    lokasiEntity.setKota(lokasiEntityDetails.getKota());
                     LokasiEntity updatedLokasi = lokasiService.saveLokasi(lokasiEntity);
                     return ResponseEntity.ok(updatedLokasi);
                 })

@@ -2,22 +2,15 @@ package com.example.soal1.entity;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "Lokasi")
 public class LokasiEntity {
@@ -39,14 +32,9 @@ public class LokasiEntity {
     @Column(name = "kota", nullable = false)
     private String kota;
 
+    @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
-
-    @PrePersist
-        public void prePersist() {
-            this.createdAt = LocalDateTime.now();
-        }
-
 
     public int getId() {
         return this.id;
@@ -95,4 +83,5 @@ public class LokasiEntity {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
+
 }
