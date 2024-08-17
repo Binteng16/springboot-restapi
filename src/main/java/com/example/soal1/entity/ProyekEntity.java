@@ -1,4 +1,4 @@
-package com.example.soal1.model;
+package com.example.soal1.entity;
 
 import java.time.LocalDateTime;
 
@@ -20,7 +20,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "Proyek")
-public class Proyek {
+public class ProyekEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

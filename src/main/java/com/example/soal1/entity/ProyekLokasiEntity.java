@@ -1,14 +1,14 @@
-package com.example.soal1.model;
+package com.example.soal1.entity;
 
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
-public class ProyekLokasi {
+public class ProyekLokasiEntity {
     @ManyToOne
     @JoinColumn(name = "proyek_id", nullable = false)
-    private Proyek proyek;
+    private ProyekEntity proyek;
 
     @ManyToOne
     @JoinColumn(name = "lokasi_id", nullable = false)
-    private Lokasi lokasi;
+    private LokasiEntity lokasi;
 }
