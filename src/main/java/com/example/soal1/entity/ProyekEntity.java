@@ -50,4 +50,70 @@ public class ProyekEntity {
         public void prePersist() {
             this.createdAt = LocalDateTime.now();
         }
+
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNamaProyek() {
+        return this.namaProyek;
+    }
+
+    public void setNamaProyek(String namaProyek) {
+        this.namaProyek = namaProyek;
+    }
+
+    public String getClient() {
+        return this.client;
+    }
+
+    public void setClient(String client) {
+        this.client = client;
+    }
+
+    public LocalDateTime getTglMulai() {
+        return this.tglMulai;
+    }
+
+    public void setTglMulai(LocalDateTime tglMulai) {
+        this.tglMulai = tglMulai;
+    }
+
+    public LocalDateTime getTglSelesai() {
+        return this.tglSelesai;
+    }
+
+    public void setTglSelesai(LocalDateTime tglSelesai) {
+        this.tglSelesai = tglSelesai;
+    }
+
+    public String getPimpinanProyek() {
+        return this.pimpinanProyek;
+    }
+
+    public void setPimpinanProyek(String pimpinanProyek) {
+        this.pimpinanProyek = pimpinanProyek;
+    }
+
+    public String getKeterangan() {
+        return this.keterangan;
+    }
+
+    public void setKeterangan(String keterangan) {
+        this.keterangan = keterangan;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return this.createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
 }

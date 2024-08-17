@@ -23,6 +23,7 @@ import lombok.Setter;
 public class LokasiEntity {
 
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -45,4 +46,53 @@ public class LokasiEntity {
         public void prePersist() {
             this.createdAt = LocalDateTime.now();
         }
+
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNamaLokasi() {
+        return this.namaLokasi;
+    }
+
+    public void setNamaLokasi(String namaLokasi) {
+        this.namaLokasi = namaLokasi;
+    }
+
+    public String getNegara() {
+        return this.negara;
+    }
+
+    public void setNegara(String negara) {
+        this.negara = negara;
+    }
+
+    public String getProvinsi() {
+        return this.provinsi;
+    }
+
+    public void setProvinsi(String provinsi) {
+        this.provinsi = provinsi;
+    }
+
+    public String getKota() {
+        return this.kota;
+    }
+
+    public void setKota(String kota) {
+        this.kota = kota;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return this.createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
 }
